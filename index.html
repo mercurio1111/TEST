@@ -1,1 +1,51 @@
+<!DOCTYPE html>
 
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+
+    <title></title>
+
+    <script type="text/javascript" src="http://MicroStrategy.dc.gov/MicroStrategyLibrary/javascript/embeddinglib.js"></script>
+
+  </head>
+
+  <body onload="load()">
+
+    <div id="mydossier" height="100%" width="100%"></div>
+
+    <script type="text/javascript">
+
+      var myDossier;
+
+      function load() {
+
+        var container = document.getElementById("mydossier"),
+
+          url = "https://microstrategy.dc.gov/MicroStrategyLibrary/app/E52A533B11EA01A28FE80080EFC53DA4/30FE682111EA6FB5A6620080EF357B1F/K53--K46";
+
+        microstrategy.dossier.create({
+
+          url: url,
+
+          enableResponsive: true,
+
+          placeholder: container,
+
+          navigationBar: {
+          enabled: true,
+          title: true,
+          toc: true,
+          everythingElse: false
+
+        }})
+
+      };
+
+    </script>
+
+  </body>
+
+</html>
